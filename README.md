@@ -1,5 +1,10 @@
 # Marcus Thorne
 
+<p align="center">
+  <img src="assets/dev_header.png" alt="Developer Terminal" width="100%" style="border-radius: 10px;">
+</p>
+
+
 Compiler engineer & AST enthusiast located in Montreal, Canada.  
 Working on dialect parsers, SQL linters, refactoring algorithms, and syntax tree transformations.
 
