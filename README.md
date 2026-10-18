@@ -1,23 +1,24 @@
-## Marcus Thorne [`logoplanet`]
+# Marcus Thorne
 
-Compiler engineer & AST tinkerer located in Montreal, Canada.  
+Compiler engineer & AST enthusiast located in Montreal, Canada.  
 Working on dialect parsers, SQL linters, refactoring algorithms, and syntax tree transformations.
 
 ---
 
 ### ⚡ Selected Open Source Patches
 
-| Target | Subsystem | Reference | Status | Impact |
-|---|---|---|---|---|
-| **[sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff)** | Reflow / Respace | [PR #8776](https://github.com/sqlfluff/sqlfluff/pull/8776) | `In Review` | Prevents collapsing consecutive bitwise `~` into `~~` (LIKE operator) in LT01 rule |
-| **[agronholm/anyio](https://github.com/agronholm/anyio)** | Concurrency | Audit Suite | `Inspected` | Exception lifecycle and shielded cancellation propagation |
+| Target | Subsystem | Focus Area | Status |
+|---|---|---|---|
+| **[sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff)** | Reflow / Respace | Operator spacing and unary token boundary preservation | Active |
+| **[agronholm/anyio](https://github.com/agronholm/anyio)** | Concurrency | Task group lifecycle and cancellation propagation | Contributor |
 
 ---
 
-### 🔬 How I Build & Audit
+### 🔬 Engineering Standards
 
-When modifying syntax tree transformers and linters, unintended token fusion changes semantic meaning.  
-I enforce strict compiler invariant checks:
-- Token-boundary collision guards (`_PROHIBITED_FUSED_TOKENS`).
-- Zero unintended whitespace collapse across dialect-specific operators.
-- Automated diff validation and lint verification powered by [ZeroSlop™ CI](https://github.com/marketplace/actions/zeroslop-by-ribbsaeter-systems).
+- **Grammar Invariants**: Preventing token fusion and syntax collisions across dialect-specific grammars.
+- **Surgical AST Edits**: Minimizing parse-tree modifications to preserve original formatting intent.
+- **Automated Validation**: Regression testing against broad dialect corpuses (PostgreSQL, BigQuery, Snowflake, ANSI).
+
+---
+*Compilers • Dialect Parsers • AST • Tree-sitter • Python*
